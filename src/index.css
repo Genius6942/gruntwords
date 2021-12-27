@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+/*
+@font-face {
+	font-family: 'neanderthal';
+	src: url('https://drive.google.com/uc?id=1u0wjQGQ6in-Ta7baUBMwNMV3A8_fHB3J') format("truetype");
+}
+*/
+
+body, body * {
+	margin: 0;
+	font-family: 'Fredoka One', cursive;
+}
+
+body {
+	overscroll-behavior: none;
+}

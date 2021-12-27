@@ -1,0 +1,160 @@
+div.game {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+div.teams {
+	font-size: 30px;
+	margin-bottom: 10px;
+	display: flex;
+	z-index: 3;
+}
+
+div.teams div.team {
+	margin: 7px;
+	border-radius: 10px;
+	box-shadow: none;
+	padding: 10px;
+}
+
+div.teams div.team.active {
+	text-decoration: underline blue solid;
+}
+
+div.timer {
+	z-index: 3;
+	font-size: 25px;
+}
+
+div.how {
+	z-index: 3;
+	font-size: 20px;
+}
+
+div.startContainer {
+	width: 100%;
+	height: 100vh;
+	background: rgba(0, 0, 0, .1);
+	backdrop-filter: blur(5px);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 100;
+	transition: all .4s ease;
+}
+
+div.startContainer.hidden {
+	display: none;
+}
+
+div.startContainer div.start {
+	width: 300px;
+	height: 300px;
+	background: white;
+	border-radius: 30px;
+	padding: 20px;
+}
+
+div.startContainer div.start div.header {
+	text-align: center;
+	border-bottom: 5px solid black;
+	padding-bottom: 15px;
+	font-size: 30px;
+}
+
+div.startContainer div.start div.contentOuter {
+	display: flex;
+}
+
+div.startContainer div.start div.contentOuter div.teams { 
+	flex-grow: 2;
+	border-right: 5px solid black;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+div.startContainer div.start div.contentOuter div.teams div.teamsHeader {}
+
+div.startContainer div.start div.contentOuter div.teams div.teamsOuter {
+	align-self: left;
+	margin-top: 10px;
+	font-size: 20px;
+}
+
+div.startContainer div.start div.contentOuter div.teams div.teamsOuter input {
+	min-width: 50px;
+	font-size: inherit;
+	border: none;
+	outline: none;
+	border-top: 4px solid black;
+	border-bottom: 4px solid black;
+	text-align: center !important;
+}
+
+div.startContainer div.start div.contentOuter div.teams div.teamsOuter button {
+	font-size: inherit;
+	background: #0055ff;
+	border: 4px solid black;
+	outline: none;
+}
+
+div.startContainer div.start div.contentOuter div.teams div.teamsOuter button:first-child {
+	border-radius: 10px 0 0 10px;
+	border-right: none;
+}
+
+div.startContainer div.start div.contentOuter div.teams div.teamsOuter button:last-child {
+	border-radius: 0 10px 10px 0;
+	border-left: none;
+}
+
+div.startContainer div.start div.contentOuter button.goOuter {
+	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 5px;
+	text-align: center;
+	flex-direction: column;
+}
+
+div.startContainer div.start div.contentOuter div.goOuter button.go {
+	transition: transform .2s ease;
+	cursor: pointer;
+	outline: none;
+	border: none;
+	background: transparent;
+}
+
+div.startContainer div.start div.contentOuter div.goOuter button.go:hover,
+div.startContainer div.start div.contentOuter div.goOuter button.go:active {
+	transform: scale(1.2);
+}
+
+div.startContainer div.start div.contentOuter div.goOuter button.go img {
+	width: 30px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type=number] {
+	-moz-appearance: textfield;
+}
+
+input {
+	-webkit-apperance: none;
+	appearance: none;
+}

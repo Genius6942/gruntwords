@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel = 'icon' href = 'https://replit.com/public/images/mark.png'>
+    <script>
+        window.addEventListener('error', (e) => {
+            if (!localStorage.useAlertError) alert(e.stack || e.message + ' at ' + e.filename + ':' + e.lineno + ':' + e.colno);
+			console.error(error);
+        });
+        window.addEventListener('keydown', (e) => {
+            if (e.key == 'i') {
+                alert(eval(prompt('>')));
+            }
+        });
+		/*
+		window.oldAlert = alert;
+		window.alert = function() {
+			for (const arg of arguments) {
+				try {
+					if (typeof arg.toString === function) {
+						alert(arg.toString());
+					}
+				} catch (e) {
+					alert(arg);
+				}
+			}
+		}*/
+
+		console.oldError = console.error;
+		console.error = function (stufs) {
+			if (stufs != '[webpack-dev-server]') alert(stufs);
+			console.oldError(...arguments);
+		}
+    </script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thoingy</title>
+</head>
+<body>
+    <div id = 'root'></div>
+</body>
+</html>

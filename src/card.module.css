@@ -1,0 +1,99 @@
+div.card {
+	transition: all .4s ease;
+    transform-origin: center;
+	top: 0;
+	left: 0;
+	position: absolute;
+	height: 2.75in;
+	width: 2in;
+	padding: 12px;
+	user-select: none;
+}
+
+@media screen and (max-width: 550px) {
+	div.card {
+		transform: scale(0.5);
+	}
+}
+
+div.card div.grey, div.card div.red {
+	position: absolute;
+    backface-visibility: hidden;
+	height: 2.75in;
+	width: 2in;
+	border: 1px solid black;
+	border-radius: 20px;
+	box-shadow: 10px 7px 5px lightgray;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 12px;
+	overflow: hidden;
+	transition: inherit;
+	background: white;
+}
+
+div.card div.grey {
+	--theme: #919b91;
+	transform: rotateY( 180deg );
+}
+
+div.card div.red {
+	--theme: #fc3503;
+	transform: rotateY( 0deg );
+}
+
+div.card.flip div.grey {
+	transform: rotateY( 0deg );
+}
+
+div.card.flip div.red {
+	transform: rotateY( 180deg );
+}
+
+div.card div div.num {
+	background: var(--theme);
+	width: 23px;
+	text-align: center;
+	font-weight: bold;
+	color: white;
+	margin-top: 10px;
+	border-radius: 50%;
+	user-select: none;
+	font-size: 20px;
+}
+
+div.card div div.word {
+	font-size: 40px;
+	color: var(--theme);
+	font-weight: bold;
+	margin-top: 15px;
+	margin-bottom: 25px;
+}
+
+div.card div div.bottom {
+	height: 5in;
+	background: var(--theme);
+	width: inherit;
+	border-radius: 0 0px 10px 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+div.card div div.bottom div.word {
+	color: white;
+	max-width: 1.5in;
+	text-align: center;
+	margin-top: 8.5px;
+	text-overflow: brea-word;
+	font-size: 25px;
+}
+
+div.card div div.bottom div.num {
+	color: var(--theme);
+	background: white;
+	height: 23px;
+	position: absolute;
+	bottom: 20px;
+}
